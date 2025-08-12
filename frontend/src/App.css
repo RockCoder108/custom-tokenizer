@@ -1,0 +1,17 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
