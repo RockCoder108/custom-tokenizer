@@ -7,12 +7,19 @@ A simple full-stack web app with a custom tokenizer backend (Node.js + Express) 
 ## Project Structure
 
 backend/
+
 ├─ index.js # Express server & API
+
 ├─ tokenizer.js # Tokenizer logic
+
 ├─ package.json
+
 frontend/
+
 ├─ src/ # React source code
+
 ├─ index.html
+
 ├─ package.json
 
 
@@ -40,7 +47,7 @@ npm start
 
 The backend server runs at http://localhost:3000.
 
-Frontend
+## Frontend
 ```
 cd frontend
 npm install
@@ -48,13 +55,16 @@ npm run dev
 ```
 The frontend app runs at http://localhost:5173.
 
-Usage
+## Usage
+
 1 Train: Input multiple texts (one per line) → Click Train Tokenizer → vocabulary is built.
+
 2 Encode: Enter a sentence → Click Encode → get token IDs array.
+
 3 Decode: Enter token IDs (comma-separated) → Click Decode → get the decoded sentence.
 
 
-API Endpoints
+## API Endpoints
 ```
 | Method | Endpoint  | Request Body             | Response                 |
 | ------ | --------- | ------------------------ | ------------------------ |
@@ -63,16 +73,23 @@ API Endpoints
 | POST   | `/decode` | `{ tokenIds: number[] }` | `{ text: string }`       |
 ```
 
-Notes
-Special tokens used: <PAD>, <UNK>, <BOS>, <EOS>.
-Unknown words map to <UNK>.
+## Notes
+
+Special tokens used: ``` <PAD>, <UNK>, <BOS>, <EOS>```.
+
+Unknown words map to ```<UNK>```.
+
 Tokenizer is case-sensitive.
+
 Vocabulary resets when backend restarts (no persistent storage).
+
 CORS enabled for frontend-backend communication.
 
 
-.gitignore
+## .gitignore
+
 Make sure to ignore node_modules and environment files by adding these to .gitignore in both backend and frontend:
+
 ```
 node_modules/
 .env
