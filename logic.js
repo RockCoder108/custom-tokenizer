@@ -32,6 +32,11 @@ class SimpleTokenizer {
       tokenId++;
     }
 
+
+
+
+    // sam
+
     // Common special characters
     const specialChars = [
       " ",
